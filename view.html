@@ -1,0 +1,26 @@
+<!-- view.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View Students</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Student List</h2>
+    <ul id="studentList"></ul>
+  </div>
+
+  <script>
+    const list = document.getElementById('studentList');
+    const students = JSON.parse(localStorage.getItem('students')) || [];
+
+    students.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = name;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

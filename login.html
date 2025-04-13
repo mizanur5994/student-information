@@ -1,0 +1,28 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="adminLogin()">Login</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div class="container" id="admin-panel" style="display:none;">
+    <h2>Admin Panel</h2>
+    <input type="text" id="studentName" placeholder="Enter Student Name"><br><br>
+    <button onclick="addStudent()">Add Student</button>
+    <input type="text" id="deleteName" placeholder="Enter Name to Delete"><br><br>
+    <button onclick="deleteStudent()">Delete Student</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
